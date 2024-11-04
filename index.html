@@ -1,90 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-View Audio Representation Learning</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="Self-Supervised Multi-View Learning for Disentangled Music Audio Representations"/>
+  <meta property="og:description" content="Late Breaking Demo, ISMIR 2024"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Self-Supervised Multi-View Learning for Disentangled Music Audio Representations</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Self-Supervised Multi-View Learning for
-            Disentangled Music Audio Representations</h1>
-            <h2><i>MARLbyMARL</i></h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
-        <p>
-            Multi-View Audio Representation Learning is an innovative approach to disentangle and understand complex audio scenes. By leveraging multiple perspectives or "views" of audio data, this research aims to improve the quality of audio-based applications, from source separation to environmental sound analysis.
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Self-Supervised Multi-View Learning for Disentangled Music Audio Representations</h1>
+            <span class="author-block">Late Breaking Demo, ISMIR 2024</span>
+
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://juliawilkins.github.io/" target="_blank">Julia Wilkins</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.sivan.fun/" target="_blank">Sivan Ding</a>,
+              </span>
+                <span class="author-block">
+                  <a href="https://magdalenafuentes.github.io/" target="_blank">Magdalena Fuentes</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://engineering.nyu.edu/faculty/juan-pablo-belloK" target="_blank">Juan Pablo Bello,
+                </span>
+              </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"></sup>Music and Audio Research Lab, New York University</span>
+                    <br>
+
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <p></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9D8aoFWBnVI?si=ArEBjQaglpMyP4eR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+      </div>
+</div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+
+            Self-supervised learning (SSL) offers a powerful way to learn robust, generalizable representations without la- beled data. In music, where labeled data is scarce, ex- isting SSL methods typically use generated supervision and multi-view redundancy to create pretext tasks. How- ever, these approaches often produce entangled represen- tations and lose view-specific information. We propose a novel self-supervised multi-view learning framework for audio designed to incentivize separation between private and shared representation spaces. A case study on audio disentanglement in a controlled setting demonstrates the effectiveness of our method.          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/> -->
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">System Overview</h2>
+          <div class="content has-text-justified">
+        
+        <img src="static/images/block.png" alt="Overview of system"/>
+        <p>Our proposed system is shown above. The input to the model is a pair of normalized log mel spectrograms, denoted \((x _ 1, x _ 2\)). Crucially, this pair of waveforms has the <i>same</i> timbre (type of waveform), but <i>different</i> frequencies. For example, we might pass a pair of spectrograms coming from sawtooth waveforms, one with a frequency of 500Hz and another of 6000Hz. Through a multi-VAE architecture and adapted <a href="https://arxiv.org/abs/1802.04942">B-TCVAE</a> objective (more details/ablation below), our model is able to learn to separate the <i>shared</i>  information (timbre) into the shared latent \(z _ s\) and the "<i>private</i>" or view-specific information (i.e. frequency) into the private latents, \((z _ {p1}, z _ {p2}\)). </p>
+        
+  
+
+      </div>
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Results</h2>
+          <div class="content has-text-justified">
+
+        <p>We first evaluate our system by examining the <b>mutual information (MI) matrix</b> between the generative factors (timbre and frequency) and the latents (private and shared). Note the dimensionality of the matrix; we train our model using 8-dimensional latents and here examine the mutual information by latent dimension and subspace, relative to the factors. We observe that timbre information is highly concentrated in the shared latent relative to private, and in contrast the private latent space contains much more information about frequency than the shared.
+
         </p>
-    </section>
+       <center><img src="static/images/mi_matrix_cam.png" alt="mutual information results" width=50%></center></td>
+       <p>
+        We also evaluate our model on <b>downstream tasks: timbre and pitch classification</b>. Using our trained model as a frozen feature extractor (i.e. the latents), we train a lightweight MLP classifier on top of the latents and evaluate classification downstream. We repeat this experiment for each combination of latent used (i.e. private or shared), and classification task and show results below. We show that when using the private latent vs. the shared latent, pitch classification is significantly better. Using the shared latents for timbre classificiation performs much better than when using the private. 
+       </p>
+       <center><img src="static/images/table_cam.png" alt="classificaiton results" width=40%></center></td>
 
-    <!-- Research Section -->
-    <section id="research">
-        <h2>Research</h2>
-        <p>Explore our ongoing projects and methodologies in audio representation learning.</p>
-        <div class="research-areas">
-            <div class="research-item">
-                <h3>Project 1: Audio Disentanglement</h3>
-                <p>A study on separating complex soundscapes into distinct components using multi-view learning.</p>
-            </div>
-            <div class="research-item">
-                <h3>Project 2: Spectrogram Analysis</h3>
-                <p>Applying advanced deep learning techniques to analyze spectrograms from multiple perspectives.</p>
-            </div>
+
+       <p>
+        To further understand the latent space, we use UMAP to plot the different latent subspaces and color by waveform type (timbre). Following the results above, again we're able to show that the shared latent space is able to capture timbre information very well. Interestingly, the cluster of sine wave embeddings is quite far from sawtooth, triangle, and square waves, likely due to the lack of harmonics in sine waves vs. the others as the distinguishing characteristic.
+       </p>
+       <center><img src="static/images/umap_horizontal.png" alt="classificaiton results" width=100%></center></td>
+
+       
+
+
+      </div>
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Understanding the Loss</h2>
+          <div class="content has-text-justified">
+
+            <p>We utilize the following <a href="https://arxiv.org/abs/1802.04942">B-TCVAE</a>-based
+              objective, adapted to the multi-view setting: </p>
+             <img src="static/images/equation_annotated.png" alt="System objective"/>
+
+        </p>
+
+        The objective above aims to <b>maximize reconstruction accuracy</b> (colored yellow) while simulataneously <b>minimizing the KL-divergence</b>, decomposed into three terms shown above. For each latent subspace...
+          <ul>
+            <li><b>Mutual Information </b>(weighted with \(\alpha\)): maximize the mutual information between the inputs and these latents. This encourages common information to be retained in learning the latent subspaces.</li>
+            <li><b>Total Correlation </b>(weighted with \(\beta\)): encourage indepence between dimensions of the latents. In practice this forces the model to encode information sparsely in the latents.</li>
+            <li><b>Dimension-wise KL </b>(weighted with \(\gamma\)): encourage Gaussanity of each latent dimension, acting effectively as a normalization term.</li>
+
+          </ul>
+
+        <p>To better-understand this complex objective, we ablate the loss by training our model using only the reconstruction loss plus each of the three decomposed KL terms above individually, varying the weights of \(\alpha\), \(\beta\) and \(\gamma\). We evaluate the model on downstream classification using the private vs. the shared latent as described above and show the results below:</p>
+
+       <center><img src="static/images/plots_ablation.png" alt="lossablation" width=80%></center></td>
+
+       <p>We observe that contrary to what is observed in <a href="https://arxiv.org/abs/1802.04942">B-TCVAE</a>, \(\alpha\) and \(\beta\) actually have a negative impact on subspace disentanglement in our use case. The terms operate more directly on feature-wise disentanglement, i.e. within-latent vs. subspace-level disentanglement. However, <b>increasing \(\gamma\)</b>, the term that encourages Gaussianity of latent dimensions, positively impacts private-shared disentanglement, as illustrated in the classification results above in which even with a small amount of dimension-wise KL included (i.e. \(\gamma = 0.1\)), we see a large improvement in timbre classification when using the shared latent vs. private, and the private latent performs much better on pitch classification than the shared. We also observe that with <i>only</i> the reconstruction objective (i.e. when any of the weights above are 0), the model still performs pretty well across the board in terms of classification, but importantly does not separate information well; the shared latent does not learn to focus more on the common timbre information than the frequency information.</p>
+       <p>As next steps, we plan to continue to investigate the loss, exploring objectives that more explicitly incentivize private-shared disentanglement instead of feature-wise disentanglement. We also plan to apply our dataset to more realistic audio datasets such as speech or singing voice in the near future. </p>
+      </div>
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container"> -->
+      <!-- Paper video. -->
+      <!-- <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
 
-    <!-- Publications Section -->
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><a href="#">Title of Publication 1</a> - Published in Journal XYZ</li>
-            <li><a href="#">Title of Publication 2</a> - Presented at Conference ABC</li>
-        </ul>
-    </section>
 
-    <!-- Team Section -->
-    <section id="team">
-        <h2>Our Team</h2>
-        <div class="team-members">
-            <div class="team-member">
-                <h3>Julia Wilkins</h3>
-            </div>
-            <div class="team-member">
-                <h3>Sivan Ding</h3>
-            </div>
-            <div class="team-member">
-                <h3>Magdalena Fuentes</h3>
-            </div>
-            <div class="team-member">
-                <h3>Juan Pablo Bello</h3>
-            </div>
-            <!-- Add more team members as needed -->
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
         </div>
-    </section>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For inquiries, please email us at <a href="mailto:jw3596@nyu.edu">jw3596@nyu.edu</a></p>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Multi-View Audio Representation Learning. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3">Citation</h2>
+      <pre><code>@inproceedings{wilkins2023sfx,
+        title={Bridging High-Quality Audio and Video via Language for Sound Effects Retrieval from Visual Queries},
+        author={Wilkins, Julia and Salamon, Justin and Fuentes, Magdalena and Bello, Juan Pablo, and Nieto, Oriol},
+        booktitle={2023 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)},
+        year={2023},
+        organization={IEEE}
+      }</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

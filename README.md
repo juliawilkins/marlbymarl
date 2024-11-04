@@ -1,5 +1,13 @@
-# Bridging High-Quality Audio and Video via Language for Sound Effects Retrieval from Visual Queries
-Companion website for paper accepted at WASPAA 2023.
+# Self-Supervised Multi-View Learning for Disentangled Music Audio Representations
+Companion [website](https://juliawilkins.github.io/marlbymarl/) for our late breaking demo at ISMIR 2024.
+
+Authors: 
+- [Julia Wilkins](https://juliawilkins.github.io/)
+- [Sivan Ding](sivan.fun)
+- [Magdalena Fuentes](https://magdalenafuentes.com/)
+- [Juan Pablo Bello](https://engineering.nyu.edu/faculty/juan-pablo-bello)
+
+[Music and Audio Research Lab @ NYU](https://steinhardt.nyu.edu/marl)
 <!-- 
 Example project pages built using this template are:
 - https://www.vision.huji.ac.il/deepsim/
